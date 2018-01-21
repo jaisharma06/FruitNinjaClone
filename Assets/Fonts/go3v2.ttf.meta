@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bbdee0e32f7c3eb41aec42f35012a8dc
+timeCreated: 1516424981
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gang of Three
+  fontNames:
+  - Gang of Three
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

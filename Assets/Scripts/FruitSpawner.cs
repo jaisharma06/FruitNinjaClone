@@ -12,9 +12,12 @@ public class FruitSpawner : MonoBehaviour {
 
     private Coroutine SpawnFruitsCoroutine;
 
+    private ApplicationManager applicationManager;
+
 	// Use this for initialization
 	void Start () {
         //StartSpawning();
+        applicationManager = ApplicationManager.instance;
 	}
 
     public void StopSpawning()
@@ -34,8 +37,17 @@ public class FruitSpawner : MonoBehaviour {
 	{
 		while (true)
 		{
+            var maxTime = applicationManager.applicationData.timer;
+            var timeSinceStart = maxTime - applicationManager.timeLeft;
+
 			float delay = Random.Range(minDelay, maxDelay);
-			yield return new WaitForSeconds(delay);
+
+            if (timeSinceStart < maxTime / 2 && applicationManager.playerScore < 45)
+            {
+                delay = Random.Range(maxDelay / 2, maxDelay);
+            }
+
+            yield return new WaitForSeconds(delay);
 
 			int spawnIndex = Random.Range(0, spawnPoints.Length);
 			Transform spawnPoint = spawnPoints[spawnIndex];

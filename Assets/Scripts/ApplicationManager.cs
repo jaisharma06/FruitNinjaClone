@@ -23,14 +23,14 @@ public class ApplicationManager : MonoBehaviour
     [SerializeField]
     private bool useExternalFile = true;
 
-    private ApplicationData applicationData;
+    public ApplicationData applicationData;
 
     [SerializeField]
     private FruitSpawner fruitSpawner;
 
     public int playerScore { get; set; }
-    private int livesLeft { get; set; }
-    private int timeLeft { get; set; }
+    public int livesLeft { get; set; }
+    public int timeLeft { get; set; }
 
     private Coroutine StartTimeCoroutine;
 

@@ -13,3 +13,4 @@ FEATURES
 --------
 1. For changing the initial lives of the player, Go to -> resources -> ApplicationData.txt and change the value of lives variable.
 2. For changing the initial timer of the player, Go to -> resources -> ApplicationData.txt and change the value of timer variable.
+3. To enable external file support check the box useExternalFile in ApplicationManager Script. The file will be created in             MyDocuments/FruitNinjaClone/ApplicationData.txt
